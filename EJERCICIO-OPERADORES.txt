@@ -1,0 +1,23 @@
+// OPERADOR ||
+console.log(false || {}); // {} - Porque el operador || se queda con el primero que sea  true o valido, como aqui el primero es false se queda con el objeto vacío.
+console.log("string" || true); // string - Por que || se queda con el primer valor válido que encuentra.
+console.log([] || 100); // [] - Por que se queda con el primer valor válido que encuentra.
+console.log(null || "Prueba"); // Prueba - Por que se queda con el primer valor válido que encuentra. (null está dentro de los valores que este operador reconoce como false o no válidos)
+console.log("" || true); // true - Por que se queda con el primer valor válido que encuentra. ("" está dentro de los valores que este operador reconoce como false o no válidos)
+console.log(undefined || false); // false - Por que ninguno de los dos es válido pero como el primero no es válido, va a mirar el segundo y sea válido o no va a devolver ese.
+
+// Operador &&
+console.log(false && {}); // false - Porque si ya reconoce que el primero no es válido, ya no comprueba el segundo y devuelve el primero.
+console.log("string" && true); // true - Por que al reconocer que la primero es válido, va a ver si el segundo es válido y lo devuelve.
+console.log([] && 100); // 100 - Por que al reconocer que la primero es válido, va a ver si el segundo es válido y lo devuelve.
+console.log(null && "Prueba"); // null - Porque si ya reconoce que el primero no es válido, ya no comprueba el segundo y devuelve el primero.
+console.log("" && true); // "" - Porque si ya reconoce que el primero no es válido, ya no comprueba el segundo y devuelve el primero.
+console.log(undefined && false); undefined - Porque si ya reconoce que el primero no es válido, ya no comprueba el segundo y devuelve el primero.
+
+// Operador ??
+console.log(false ?? {}); // false - Si el primer valor no es null o undefined siempre devuelve el primero valor.
+console.log("string" ?? true); // string - Si el primer valor no es null o undefined siempre devuelve el primero valor.
+console.log([] ?? 100); // [] - Si el primer valor no es null o undefined siempre devuelve el primero valor.
+console.log(null ?? "Prueba"); // Prueba - Si el primer valor es null o undefined siempre devuelve el segundo valor.
+console.log("" ?? true); // "" - Si el primer valor no es null o undefined siempre devuelve el primero valor.
+console.log(undefined ?? false); // false - Si el primer valor es null o undefined siempre devuelve el segundo valor.
